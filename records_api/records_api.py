@@ -52,7 +52,6 @@ def getRecords():
 	query_string = urllib.parse.unquote(request.query_string.decode("utf-8"))
 
 	# first, verify that color string is a list
-
 	color_not_list_regex = re.compile('color=([a-z]*),?')
 	if color_not_list_regex.match(query_string):
 		return BAD_REQUEST, 400
